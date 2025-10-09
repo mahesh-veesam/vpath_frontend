@@ -38,7 +38,7 @@ const Navbar = () => {
     >
       <HStack spacing={4} pt="2">
         <Image
-          src="./assets/Learn_with_Ease-removebg-preview.png"
+          src="../assets/Learn_with_Ease-removebg-preview.png"
           alt="Logo"
           height="40px"
         />

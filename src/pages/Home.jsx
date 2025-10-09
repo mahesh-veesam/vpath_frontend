@@ -59,7 +59,7 @@ function Home() {
 
         <Box>
           <Image
-            src="./assets/books1.png"
+            src="../assets/books1.png"
             alt="Books"
             w={{ base: "280px", md: "400px" }}
             h={{ base: "250px", md: "auto" }}
