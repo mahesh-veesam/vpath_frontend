@@ -7,6 +7,7 @@ import { useAuthStore } from "../store/useAuthStore";
 import { useNavigate, useLocation} from "react-router-dom"
 import Menu from './Menu';
 import Theme from './Theme';
+import vpathlogo from "../assets/Learn_with_Ease-removebg-preview.png"
 
 const Navbar = () => {
     const {authUser, login, isLoggingIn, logout} = useAuthStore();
@@ -38,7 +39,7 @@ const Navbar = () => {
     >
       <HStack spacing={4} pt="2">
         <Image
-          src="../assets/Learn_with_Ease-removebg-preview.png"
+          src={vpathlogo}
           alt="Logo"
           height="40px"
         />

@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react"
 import { Link } from "react-router-dom"
 import { FaNoteSticky , FaCalculator } from "react-icons/fa6";
+import bookslogo from "../assets/books1.png"
 
 function Home() {
   return (
@@ -59,7 +60,7 @@ function Home() {
 
         <Box>
           <Image
-            src="../assets/books1.png"
+            src={bookslogo}
             alt="Books"
             w={{ base: "280px", md: "400px" }}
             h={{ base: "250px", md: "auto" }}
