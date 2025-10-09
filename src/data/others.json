@@ -1,0 +1,42 @@
+[
+  {
+    "code": "MAT1003",
+    "title": "Discrete Mathematical Structures",
+    "cat1": "https://drive.google.com/drive/folders/1dnvXDKIrwGppKepKe2Bq6FVxV2UTzUuQ?usp=drive_link",
+    "cat2": "https://drive.google.com/drive/folders/1do6wbmGZpMN8WW5Vk5RFyoAFsg8PJiSn?usp=drive_link",
+    "fat": "https://drive.google.com/drive/folders/1doBvfYu_kSKBQtZo74sLIXgVko8oOWs2?usp=drive_link",
+    "short": "https://drive.google.com/drive/folders/1ds40ogubTMCpboahP1mpAzJ7GKUG0BiO?usp=drive_link"
+  },
+  {
+    "code": "MAT1007",
+    "title": "Discrete Mathematics",
+    "cat1": "https://drive.google.com/drive/folders/1dLzzFKPbNjjoTb7p8DZECKUQs5oirgJp?usp=drive_link",
+    "cat2": "https://drive.google.com/drive/folders/1dPGtNaFtFpIbFVdHN02Tozl4p12vPS7C?usp=drive_link",
+    "fat": "https://drive.google.com/drive/folders/1dPauqaNGVoLEfmLaSiEzclMzmfsPpivv?usp=drive_link",
+    "short": "https://drive.google.com/drive/folders/1dQody-429AJK7ldvXvSqCvsjextu3MNY?usp=drive_link"
+  },
+  {
+    "code": "MAT1011",
+    "title": "Applied Statistics",
+    "cat1": "https://drive.google.com/drive/folders/1Le4d-jdKShj0IPmE9RDaRpRbdkm2ga_S?usp=drive_link",
+    "cat2": "https://drive.google.com/drive/folders/1LfDy1Ya7b42lV44ssEHHF_uiShk_5nbH?usp=drive_link",
+    "fat": "https://drive.google.com/drive/folders/1LhTdfp4HR1LmlTrNnbfAxbiNswXFBETx?usp=drive_link",
+    "short": "https://drive.google.com/drive/folders/1LhUM7SJa5cagnPsmknHExRBe0NjiKwvO?usp=drive_link"
+  },
+    {
+    "code": "ECE2002",
+    "title": "Computer Organization and Architecture",
+    "cat1": "https://drive.google.com/drive/folders/1LOKaAKNJ9QRuE4ApT9gZum9YQo0WsF7K?usp=drive_link",
+    "cat2": "https://drive.google.com/drive/folders/1LXVke1Oh5_O1dRfTL599gXQ8xjcYJytW?usp=drive_link",
+    "fat": "https://drive.google.com/drive/folders/1LbiHfMbujgzrB3Zr9aiQqDPNnCc8aHSl?usp=drive_link",
+    "short": "https://drive.google.com/drive/folders/1Lckg6CylWjgHa_Rek86DGglrjDZPtxjw?usp=drive_link"
+  },
+  {
+    "code": "ECE2015",
+    "title": "Computer Architecture",
+    "cat1": "https://drive.google.com/drive/folders/1NJtTBK5UBasfHM5oRSPvS3ac5sfMc2Dd?usp=drive_link",
+    "cat2": "https://drive.google.com/drive/folders/1NMk6JSPWNbZdJckuSEVt0dyD7AnnqI1c?usp=drive_link",
+    "fat": "https://drive.google.com/drive/folders/1NNYS3DR_ffG0CCkkpw-HEaRRQCS-XMV3?usp=drive_link",
+    "short": "https://drive.google.com/drive/folders/1NOlt3sG4GQM8IfC0vFF3a8jDf4uM_lj4?usp=drive_link"
+  }
+]

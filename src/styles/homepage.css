@@ -1,0 +1,186 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    /* font-family: "Inter", "gentium plus" ; */
+}
+.main{
+    /* background-image: var(--primary-color); */
+    background-size: cover;
+    /* height: 100%; */
+}
+:root{
+    --primary-color:linear-gradient(to bottom, rgb(3, 3, 14),rgb(3, 3, 26),rgb(3, 3, 34),black);
+    --secondary-color:linear-gradient(to top right ,rgb(9, 9, 59),rgb(116, 106, 206));
+    --text-color:linear-gradient(to top right,blue,aqua);
+    --color-one:linear-gradient(to right, aqua,white,wheat,rgb(177, 143, 143));
+    --color-two:linear-gradient(to top right,blue,aqua,rgb(3, 3, 36));
+    --instagram:linear-gradient(to right top,#f9ce34,#ee2a7b,#6228d7);
+}
+ol,ul{
+    padding-left: 7%;
+    padding-right: 2%;
+}
+.section{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around; 
+}
+.section a {
+    text-decoration: none;
+    margin: 10px 0px 5px 0px;
+    background-image: var(--secondary-color);
+    height: 150px;
+    width: 180px;
+    border-radius: 20px;
+    text-align: center;
+}
+.section a:hover{
+    background-image: var(--text-color);    
+    transform: scale(1.1);
+    transition: 0.6s;
+}
+.section a .box i{
+    color: rgb(212, 198, 212);
+    text-align: center;
+    margin: 20px;
+    font-size: 50px;
+}
+.box p{
+    font-weight: 600;
+    color: rgb(142, 147, 151);
+}
+@media(max-width:600px) {
+    #w{
+        background-image: var(--color-one);
+        background-clip: text;
+        color: transparent;
+        font-family: "gentium plus";
+    }
+    #p{
+        background-image: var(--color-two);
+        background-clip: text;
+        color: transparent;
+        font-family: "gentium plus";
+        font-size: 60px;
+        font-weight: 400;
+    }
+    .section{
+        width: 85% ;
+        min-width: 200px;
+        margin-left: 5%;
+        margin-top: 20px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .section a{
+        position: relative;
+        margin: 30px 0px 5px 0px;
+        height: 33vw;
+        width: 43%;
+    }
+    .box3{
+        width: 92%;
+    }
+    .box p{
+        font-size: 4vw;
+    }
+    .section a .box i{
+        margin: 15px;
+        font-size: 11vw;
+    }
+}
+.head-intro{
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;  
+    height: 400px;
+}
+.image img{
+    width: 400px;
+}
+.text{
+    margin-left: 1%;
+    padding: 5% 3% 0 1%;
+    color:  white;
+}
+.intro{
+    margin: 10px 0;
+    font-size: 22px;
+    letter-spacing: 0px;
+}
+.intro1{
+    margin-left: 7%;
+}
+.intro2{
+    padding-top: 5% ;
+    font-size: 18px;
+}
+
+.intro ul{    
+    list-style-type: none;
+    margin-top: 10px;
+    line-height: 30px;
+}
+ul li{
+    margin: 10px 0;
+    color: rgba(233, 247, 247, 0.945);
+    word-spacing: 2px;
+    color: white;
+}
+.intro h1{
+    letter-spacing: 1px;
+    display: inline;
+}
+#w{
+    background-image: var(--color-one);
+    background-clip: text;
+    color: transparent;
+    font-family: "gentium plus";
+}
+#p{
+    background-image: var(--color-two);
+    background-clip: text;
+    color: transparent;
+    font-family: "gentium plus";
+    font-size: 60px;
+    font-weight: 400;
+} 
+
+@media (max-width:910px) {
+    .head-intro{
+        height: 550px;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .head-intro .image img{
+        width: 280px;
+        height: 250px;
+    }
+    .text{
+        width: 95%;
+        margin: 0;
+        padding: 0 5%;
+    }
+    .intro{
+        font-size: 16px;
+    }
+    #p{
+        font-size: 32px;
+    }
+    .text{
+        padding: 0;
+    }
+}
+.box1:hover .box .p1{
+    color: rgb(212, 198, 212);
+    font-weight: "700";
+}

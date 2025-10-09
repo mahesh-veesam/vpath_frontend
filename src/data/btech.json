@@ -1,0 +1,90 @@
+[
+  {
+    "code": "MAT1001",
+    "title": "Calculus for Engineers",
+    "cat1": "https://drive.google.com/drive/folders/1sUS7Z4xjNW9tsQ36ZdPHkWncXnrNdzNH?usp=drive_link",
+    "cat2": "https://drive.google.com/drive/folders/1sWtS5_9Fb1msNRHw00dpafU78iteZJXZ?usp=drive_link",
+    "fat": "https://drive.google.com/drive/folders/1sX8kIpxqxuv_rnECo7rS9Ldl8eycBdJ5?usp=drive_link",
+    "short": "https://drive.google.com/drive/folders/1s_xhyXpQyjneCDcahqLMuby_uJixVPAp?usp=drive_link"
+  },
+  {
+    "code": "CSE1012",
+    "title": "Problem Solving using Python",
+    "cat1": "https://drive.google.com/drive/folders/1HbrRdicCN_EgmKlG3itbsr_k5ceG1nZH?usp=drive_link",
+    "cat2": "https://drive.google.com/drive/folders/1HnGXiMaheMW3fJzTlfhkIDH5vpEC-dLM?usp=drive_link",
+    "fat": "https://drive.google.com/drive/folders/1I4APVQ1f2H7rsCAmgOtkJdyfcZEYf0Mb?usp=drive_link",
+    "short": "https://drive.google.com/drive/folders/1I70wRdv8K-i1r0aujNJlSc_KDhwrtJwL?usp=drive_link"
+  },
+  {
+    "code": "CHY1009",
+    "title": "Chemistry and Environmental Studies",
+    "cat1": "https://drive.google.com/drive/folders/1tCwOte2cKXx6nxrfCrhPpWog60SeI3pF?usp=drive_link",
+    "cat2": "https://drive.google.com/drive/folders/1tGxg1IosjQ1Q3mgf0p_eVp2fA0VQk61u?usp=drive_link",
+    "fat": "https://drive.google.com/drive/folders/1tHnviLCZLHb5nIIZN46GeMXByYgd00tk?usp=drive_link",
+    "short": "https://drive.google.com/drive/folders/1tQB_pJG7FDbYzPHz6Qeo65-Tx7f4aGyt?usp=drive_link"
+  },
+  {
+    "code": "ECE1002",
+    "title": "Fundamentals of Electrical and Electronics Engineering",
+    "cat1": "https://drive.google.com/drive/folders/1B7lYvtH4NCqDERTAltu302IpTAPkV64a?usp=drive_link",
+    "cat2": "https://drive.google.com/drive/folders/1BCQCinQMg26R58CiLyfiq0aeVqStrx66?usp=drive_link",
+    "fat": "https://drive.google.com/drive/folders/1BJO_Uar8Po1Cu1wJKnoxgxmyqc8Y3AwG?usp=drive_link",
+    "short": "https://drive.google.com/drive/folders/1BONfiA-Tot34L_WtD5Wonr5-N65Fz-tL?usp=drive_link"
+  },
+  {
+    "code": "ENG1001",
+    "title": "English for Essential Communication",
+    "cat1": "https://drive.google.com/drive/folders/1IHV-gfowHFW01r0sML4qgWHCW8Kpx3tS?usp=drive_link",
+    "cat2": "https://drive.google.com/drive/folders/1IIYV3oggo54jKUcy1WLHaME09Ad3odv1?usp=drive_link",
+    "fat": "https://drive.google.com/drive/folders/1IS00eod11NLFhK-3OcplfObtce9i9avB?usp=drive_link",
+    "short": "https://drive.google.com/drive/folders/1IWiIQXy_Wih8CiV_J5ixj0vF4bURe9aC?usp=drive_link"
+  },
+  {
+    "code": "ENG1002",
+    "title": "English for Effective Communication",
+    "cat1": "https://drive.google.com/drive/folders/1IYzXKk3ugxYO85GD0On4VnxmtPWtDwgY?usp=drive_link",
+    "cat2": "https://drive.google.com/drive/folders/1I_lGen6bX2__WDcMo-Wy4pExX_khtqC7?usp=drive_link",
+    "fat": "https://drive.google.com/drive/folders/1IdbAS7uuur7rBe3DwKm6AazIj64l4tdc?usp=drive_link",
+    "short": "https://drive.google.com/drive/folders/1IeMm_KgvNjJDTruPTeAg05wARxE5ajvT?usp=drive_link"
+  },
+  {
+    "code": "PHY1008",
+    "title": "Modern Physics",
+    "cat1": "https://drive.google.com/drive/folders/1sz3A-GT4uzzPLx4ovcCzIjRHBy15O0Ku?usp=drive_link",
+    "cat2": "https://drive.google.com/drive/folders/1t39HIAUKxnkc7iQqrWo323o3oX3vjPHf?usp=drive_link",
+    "fat": "https://drive.google.com/drive/folders/1t4uIwKaFsDIIa2egmJCqkBFf_YEVbqQ5?usp=drive_link",
+    "short": "https://drive.google.com/drive/folders/1t9eAEmdGjVITrI-S3SL1o6eoR-DQ146D?usp=drive_link"
+  },
+  {
+    "code": "MAT1002",
+    "title": "Applications of DIfferential and Difference Equations",
+    "cat1": "https://drive.google.com/drive/folders/1sh4aiJgW5cBvONyG3MGmsEK5t3wRUgwH?usp=drive_link",
+    "cat2": "https://drive.google.com/drive/folders/1shMVkiOod-Kxubpkd6y_m6abmdX4xSew?usp=drive_link",
+    "fat": "https://drive.google.com/drive/folders/1srvzXnCnOYdxfvsyru1VXnFrYLnheeLp?usp=drive_link",
+    "short": "https://drive.google.com/drive/folders/1stJE8PivCBSlORnAn7zsiBFf652KAoxb?usp=drive_link"
+  },
+  {
+    "code": "CSE2005",
+    "title": "Object Oriented Programming using JAVA",
+    "cat1": "https://drive.google.com/drive/folders/1j5cNzevCnt3DnXMYBY1NVkNBrzQipkmI?usp=drive_link",
+    "cat2": "https://drive.google.com/drive/folders/18xeL8TkJGesobmIyqiXHUfmfX3NcAudw?usp=drive_link",
+    "fat": "https://drive.google.com/drive/folders/1_WzQBvmPLrqkHMqrNm5vf-qymuzh0tWU?usp=drive_link",
+    "short": "https://drive.google.com/drive/folders/1WYZDP08SlUIkmYndZx-AifmPoXnHgg_8?usp=drive_link"
+  },
+  {
+    "code": "ECE1003",
+    "title": "Digital Logic Design",
+    "cat1": "https://drive.google.com/drive/folders/1HlxGiSWQwNzL8i9Jf4rrFgr7pDdnF43_?usp=drive_link",
+    "cat2": "https://drive.google.com/drive/folders/1KYfL7rpEQuwyovGb_WaFHyo0FW5aEbPH?usp=drive_link",
+    "fat": "https://drive.google.com/drive/folders/1x84CM3OM_p8Kp7zJ5KbBP1x4sLcXdg1P?usp=drive_link",
+    "short": "https://drive.google.com/drive/folders/1zrTnZ_Vic99JgwBNO2sA3bTwRI45yRZf?usp=drive_link"
+  },
+  {
+    "code": "ENG2001",
+    "title": "English for Professional Communication",
+    "cat1": "https://drive.google.com/drive/folders/1kdeAPK33iMjHknMux0f2wmxIftNCIU4p?usp=drive_link",
+    "cat2": "https://drive.google.com/drive/folders/1LRC9tqkDdgvkl0j9Hx2kK0-i8Ipk9ggC?usp=drive_link",
+    "fat": "https://drive.google.com/drive/folders/1BqoZVBa0BorFroSJzBebI4GZqMlyCiGP?usp=drive_link",
+    "short": "https://drive.google.com/drive/folders/1lUQ83HC1W2kF6ADniYvD8lPH3ZtmJ2S1?usp=drive_link"
+  }
+]
