@@ -12,6 +12,7 @@ import CgpaCalc from "@/components/CgpaCalc";
 
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import Calculator from "@/pages/Calculator";
+import Admin from "@/pages/Admin";
 
 const router = createBrowserRouter([
   {
@@ -48,13 +49,16 @@ const router = createBrowserRouter([
       
       {
         path: "calculator", element: <Calculator />,
-
       },
 
       {
         path: "communities", element: <Communities />,
-
       },
+
+      {
+        path: "maheshAsAdmin", element: <Admin />,
+      },
+
       { path : "*", element : <Navigate to="/home" replace/>},
     ]
   }

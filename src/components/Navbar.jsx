@@ -75,16 +75,27 @@ const Navbar = () => {
       </HStack>
 
       <HStack spacing={4} hideBelow="lg" pt="1">
-        {/* <Theme/> */}
         <Button pr="20px" mt="0" fontSize="16px" rounded="12px" variant="subtle" onClick={handleClick}><LuUser />
                 {authUser === null ? "Login" : "Logout" } 
         </Button>
+         {authUser?.email === "mahesh.23mis7302@vitapstudent.ac.in" && 
+            <Button pr="13px" mr="10px" fontSize="14px" fontWeight={600} rounded="12px" size="xs" variant="subtle" 
+                onClick={()=>navigate("/maheshasadmin")}> 
+                Users
+            </Button>
+        }
       </HStack>         
 
        <HStack hideFrom="lg">
         {!authUser &&
             <Button pr="13px" mr="10px" fontSize="14px" fontWeight={600} rounded="12px" size="xs" variant="subtle" onClick={handleClick}> <LuUser />
                 Login
+            </Button>
+        }
+        {authUser?.email === "mahesh.23mis7302@vitapstudent.ac.in" && 
+            <Button pr="13px" mr="10px" fontSize="14px" fontWeight={600} rounded="12px" size="xs" variant="subtle" 
+                onClick={()=>navigate("/maheshasadmin")}> 
+                Users
             </Button>
         }
             <Menu/>
