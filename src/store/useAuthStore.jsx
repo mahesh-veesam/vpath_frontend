@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { axiosInstance } from "../utils/axios.js";
-import toast from "react-hot-toast";
+import { toaster } from "@/components/ui/toaster"
 
 const BASE_URL = "http://192.168.1.34:5000/courses" 
 
@@ -34,7 +34,10 @@ export const useAuthStore = create((set, get) => ({
       console.log("working")
       window.location.href = "https://vpath.onrender.com/auth/google";
     } catch (error) {
-      toast.error(error?.message || "Use College mail id to login");
+      toaster.create({
+        description: error?.message || "Use College mail id to login",
+        type: "error",
+      });
     } finally {
       set({ isLoggingIn: false });
     }
@@ -45,9 +48,15 @@ export const useAuthStore = create((set, get) => ({
       await axiosInstance.post("/auth/logout");
       set({ authUser: null });
       localStorage.removeItem("authUser")
-      toast.success("Logged out successfully");
+      toaster.create({
+        description: `Logged out successfully`,
+        type: "info",
+      });
     } catch (error) {
-      toast.error(error?.response?.data?.message);
+      toaster.create({
+        description: error?.response?.data?.message,
+        type: "error",
+      });
     }
   },
 }));

@@ -63,7 +63,7 @@ export default function UploadForm() {
     });
     console.log('Upload success:', response.data);
 
-    toaster.response(response, {
+    toaster.promise(response, {
         success: {
             title: "Successfully uploaded!",
             description: `Thank You! ${authUser.name}, Your contribution is valuable.`,
