@@ -58,24 +58,31 @@ export default function UploadForm() {
     });
 
   try {
-    const response = await axiosInstance.post('courses/upload', data, {
-      headers: {'Content-Type': 'multipart/form-data'},
+    const uploadPromise = axiosInstance.post('courses/upload', data, {
+        headers: { 'Content-Type': 'multipart/form-data' },
     });
-    console.log('Upload success:', response.data);
 
-    toaster.promise(response, {
+    // show toast during the upload
+    toaster.promise(uploadPromise, {
+        loading: { title: "Uploading...", description: "Please wait" },
         success: {
             title: "Successfully uploaded!",
             description: `Thank You! ${authUser.name}, Your contribution is valuable.`,
         },
         error: {
             title: "Upload failed",
-            description: "Something wrong with the upload",
+            description: "Something went wrong with the upload",
         },
-        loading: { title: "Uploading...", description: "Please wait" },
-    })
+    });
 
-    navigate("/recentSem");
+    try {
+        const response = await uploadPromise;
+        console.log('Upload success:', response.data);
+        navigate("/recentSem"); // ✅ only after successful upload
+        } catch (err) {
+        console.error("Upload error:", err);
+    }
+
     setFormData({
       code: '',
       title: '',
