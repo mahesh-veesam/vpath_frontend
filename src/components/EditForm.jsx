@@ -49,7 +49,7 @@ const EditForm = ({data , onUpdate , setEditForm}) => {
   };
 
   return (
-    <Box bg="rgba(255, 255, 255, 0.1)" backdropFilter="blur(8px)" width="100vw" height="100vh" pos="fixed">
+    <Box bg="rgba(255, 255, 255, 0.1)" backdropFilter="blur(8px)" width="100vw" height="100vh" pos="fixed" zIndex={10}>
     <Box borderWidth={2} borderRadius="16px" bgColor="black" py={5} width={["90%","50%"]} pos="absolute" top={["50%","55%"]} left="50%" transform="translate(-50%, -50%)">
        <form onSubmit={handleSubmit}>
           <Stack gap="1" mx="2%" my="2%">

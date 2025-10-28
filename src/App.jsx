@@ -1,12 +1,10 @@
 import { useState,useEffect } from 'react'
 import Navbar from './components/Navbar'
 import { useLocation , Outlet } from 'react-router-dom'
-import toast from "react-hot-toast";
-import { Toaster as toastReact } from "react-hot-toast";
 import { initGA , logPageView } from "./analytics/ga";
 import { useAuthStore } from "./store/useAuthStore";
 import { Box } from '@chakra-ui/react';
-import { Toaster } from '@/components/ui/toaster';
+import { Toaster, toaster } from "@/components/ui/toaster"
 
 function App() {  
   const {checkAuth ,authUser, setAuthUser} = useAuthStore();
@@ -31,13 +29,20 @@ function App() {
         console.log(`Hi, ${userData.name}`);
         setAuthUser(userData);
 
-        toast.success(`Hi, ${userData.name}`);
+        toaster.create({
+          description: `Hi, ${userData.name}`,
+          type: "info",
+        })
 
         localStorage.setItem("authUser", JSON.stringify(userData));
 
         window.history.replaceState({}, document.title, "/");
       } catch (err) {
         console.error("Error parsing user data", err);
+        toaster.create({
+          description: `Use college mail to login`,
+          type: "warning",
+        })
       }
     } else {
       const savedUser = localStorage.getItem("authUser");
@@ -49,7 +54,6 @@ function App() {
 
   return (
     <Box mb="20px">
-      <toastReact position="top-center" reverseOrder={false} />
       <Toaster />
       <Navbar/>
       <Outlet/>
