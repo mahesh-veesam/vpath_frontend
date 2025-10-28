@@ -31,7 +31,7 @@ function App() {
 
         toaster.create({
           description: `Hi, ${userData.name}`,
-          type: "info",
+          type: "success",
         })
 
         localStorage.setItem("authUser", JSON.stringify(userData));
