@@ -1,11 +1,11 @@
-import { Field, Input, Stack,SimpleGrid,Box,HStack, Portal, Select,createListCollection,FileUpload, Icon , IconButton , Text , Spinner} from '@chakra-ui/react'
+import { Field, Input,Alert, Stack,CloseButton,SimpleGrid,Box,HStack, Portal, Select,createListCollection,FileUpload, Icon , IconButton , Text , Spinner} from '@chakra-ui/react'
 import { useState } from 'react'
 import { LuUpload } from "react-icons/lu"
-import Toggle from './Toggle'
-import axios from 'axios'
 import { axiosInstance } from '@/utils/axios'
 import { IoIosArrowBack } from "react-icons/io";
 import { useNavigate } from 'react-router-dom'
+import { useAuthStore } from '@/store/useAuthStore';
+import { toaster } from "@/components/ui/toaster"
 
 export default function UploadForm() {
     const [formData, setFormData] = useState({
@@ -18,6 +18,8 @@ export default function UploadForm() {
     })
 
     const navigate = useNavigate()
+    const {authUser} = useAuthStore()
+    const [showAlert, setShowAlert] = useState(true);
 
     const handleChange = (e) => {
         const { name, type, value, files } = e.target;
@@ -29,7 +31,12 @@ export default function UploadForm() {
 
 
  const handleSubmit = async (e) => {
-  if(isUploading) return;
+  if (!authUser) {
+    setShowAlert(true);
+    return;
+  }
+
+  if (isUploading) return;
 
   e.preventDefault();
   setIsUploading(true) 
@@ -56,7 +63,19 @@ export default function UploadForm() {
     });
     console.log('Upload success:', response.data);
 
-    // Clear form
+    toaster.response(response, {
+        success: {
+            title: "Successfully uploaded!",
+            description: `Thank You! ${authUser.name}, Your contribution is valuable.`,
+        },
+        error: {
+            title: "Upload failed",
+            description: "Something wrong with the upload",
+        },
+        loading: { title: "Uploading...", description: "Please wait" },
+    })
+
+    navigate("/recentSem");
     setFormData({
       code: '',
       title: '',
@@ -76,12 +95,25 @@ export default function UploadForm() {
 
   return (
     <div>
+    <Box mx={["15%","29%"]}>
+     {!authUser && showAlert && (
+        <Alert.Root status="warning" width={["99%"]} mb={["5","1"]}>
+            <Alert.Indicator />
+            <Alert.Content>
+                <Alert.Title>
+                    Please log in to upload files
+                </Alert.Title>
+            </Alert.Content>
+            <CloseButton onClick={() => setShowAlert(false)}  pos="absolute" top="10%" insetEnd="5%" />
+        </Alert.Root>
+        )}
+    </Box> 
     <Box 
         display="flex"
         flexDirection="row"
         justifyContent="flex-start"
         alignItems="center"
-        mx={["5%","9%"]} mt={["0%","1%"]}
+        mx={["5%","9%"]} mt={["0","1%"]}
         >
     <Box
         borderRadius="full"
@@ -93,9 +125,10 @@ export default function UploadForm() {
         </IconButton>
     </Box>
     <HStack>
-        <Text fontSize={19} fontWeight={600} zIndex={100}>Upload Question Paper</Text>
+        <Text fontSize={19} fontWeight={600} zIndex={1}>Upload Question Paper</Text>
     </HStack>
     </Box>
+    
     <form onSubmit={handleSubmit} encType="multipart/form-data">
     <Stack gap="1" mx={["7%","10%"]} my="2%">
                 <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={1}>

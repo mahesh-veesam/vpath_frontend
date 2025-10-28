@@ -35,7 +35,7 @@ const Navbar = () => {
       px="6%" py={["38px","50px"]}
       height="60px"
       borderColor="gray.800"
-      position="fixed" width="100%" zIndex="10" bg="black"
+      position="fixed" width="100%" zIndex={100} bg="black"
     >
       <HStack spacing={4} pt="2">
         <Image

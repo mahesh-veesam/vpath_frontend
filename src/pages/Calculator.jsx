@@ -1,7 +1,7 @@
 import CgpaCalc from '@/components/CgpaCalc'
 import GpaCalc from '@/components/GpaCalc'
 import React from 'react'
-import { Link, Tabs } from "@chakra-ui/react"
+import { Link, Tabs , Box } from "@chakra-ui/react"
 import { useEffect } from 'react'
 
 const Calculator = () => {
@@ -11,7 +11,7 @@ const Calculator = () => {
   }, []);
 
   return (
-    <div>
+    <Box mt="3">
       <Tabs.Root lazyMount defaultValue="tab-1" alignItems="center">
         <Tabs.List width={["80%","50%"]} mx="auto" display="flex" justifyContent="space-around">
           <Tabs.Trigger value="tab-1">GPA Calculator</Tabs.Trigger>
@@ -24,7 +24,7 @@ const Calculator = () => {
           <CgpaCalc/>
         </Tabs.Content>
       </Tabs.Root>
-    </div>
+    </Box>
   )
 }
 

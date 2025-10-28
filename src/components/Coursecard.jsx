@@ -67,7 +67,7 @@ const Coursecard = () => {
         <Flex 
             justify="center" 
             align="center" 
-            height="100vh" // full viewport height
+            height="100vh"
         >
         <Spinner size="xl" />
         </Flex>
@@ -92,7 +92,7 @@ const Coursecard = () => {
                 </IconButton>
             </Box>
             <VStack>
-                <Text fontWeight={600} fontSize={19} zIndex={100}>{code}</Text>
+                <Text fontWeight={600} fontSize={19} zIndex={1}>{code}</Text>
             </VStack>
         </Box>
     <Text mx="6%" fontWeight={500} fontSize={16}>{course}</Text>
