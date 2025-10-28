@@ -2,10 +2,11 @@ import { useState,useEffect } from 'react'
 import Navbar from './components/Navbar'
 import { useLocation , Outlet } from 'react-router-dom'
 import toast from "react-hot-toast";
-import { Toaster } from "react-hot-toast";
+import { Toaster as toastReact } from "react-hot-toast";
 import { initGA , logPageView } from "./analytics/ga";
 import { useAuthStore } from "./store/useAuthStore";
 import { Box } from '@chakra-ui/react';
+import { Toaster } from '@/components/ui/toaster';
 
 function App() {  
   const {checkAuth ,authUser, setAuthUser} = useAuthStore();
@@ -48,7 +49,8 @@ function App() {
 
   return (
     <Box mb="20px">
-      <Toaster position="top-center" reverseOrder={false} />
+      <toastReact position="top-center" reverseOrder={false} />
+      <Toaster />
       <Navbar/>
       <Outlet/>
     </Box>
