@@ -19,7 +19,7 @@ const SelectPyq = ({batch}) => {
     <div>
     <Flex justifyContent="space-evenly" alignItems="center" flexDirection={{base:"column", lg:"row"}} mt={3}> 
         <Box mt={5}>
-        <Select.Root collection={batchOptions} size="md" width="320px" value={selectedBatch} 
+        <Select.Root collection={batchOptions} size="md" width="300px" value={selectedBatch} 
             onValueChange={(e) =>
                 setSelectedBatch(e.value)
             }>
@@ -48,7 +48,7 @@ const SelectPyq = ({batch}) => {
       </Select.Root>
       </Box>
       <Box mt={5}>
-        <Select.Root collection={selectedBatch == "freshers" ? freshersBranch : seniorsCode} size="sm" width="320px" defaultValue={(selectedBatch == "freshers" ? freshersBranch : seniorsCode)[0]}
+        <Select.Root collection={selectedBatch == "freshers" ? freshersBranch : seniorsCode} size="sm" width="300px" defaultValue={(selectedBatch == "freshers" ? freshersBranch : seniorsCode)[0]}
              onValueChange={(e) =>
                 setSelectedBranchCode(e.value)
             }

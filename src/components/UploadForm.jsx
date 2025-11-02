@@ -102,13 +102,13 @@ export default function UploadForm() {
 
   return (
     <div>
-    <Box mx={["15%","29%"]}>
+    <Box mx={["12%","29%"]}>
      {!authUser && showAlert && (
         <Alert.Root status="warning" width={["99%"]} mb={["5","1"]}>
             <Alert.Indicator />
             <Alert.Content>
                 <Alert.Title>
-                    Please log in to upload files
+                    Please log in to upload images
                 </Alert.Title>
             </Alert.Content>
             <CloseButton onClick={() => setShowAlert(false)}  pos="absolute" top="10%" insetEnd="5%" />
@@ -235,7 +235,7 @@ export default function UploadForm() {
                 <SimpleGrid columns={{ base: 1, lg: 1 }} spacing={1} mt="3"> 
                     <Box m="3">
                         <FileUpload.Root maxW="xxl" w="100%" alignItems="stretch" maxFiles={4}>
-                            <FileUpload.HiddenInput type='file' name="images" value={formData.image} onChange={handleChange}  />
+                            <FileUpload.HiddenInput type='file' accept="image/*" name="images" value={formData.image} onChange={handleChange}  />
                             <HStack spacing="4" alignItems="stretch" w="85%">
                                 <FileUpload.Dropzone p="4" maxW="xl" flex="9">
                                 <Icon size="md" color="fg.muted"> 
