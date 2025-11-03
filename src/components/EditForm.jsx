@@ -1,6 +1,6 @@
 import { Field, Input, Stack,SimpleGrid,Box,HStack, Portal, Select,createListCollection, IconButton , Button , Text} from '@chakra-ui/react'
 import { useState , useEffect} from 'react'
-import axios from 'axios'
+import { axiosInstance } from '@/utils/axios';
 import { IoChevronBack } from "react-icons/io5";
 import { toaster } from "@/components/ui/toaster"
 
@@ -30,8 +30,8 @@ const EditForm = ({data , onUpdate , setEditForm}) => {
     };
 
     try {
-      const response = await axios.patch(`http://192.168.1.34:5000/courses/update/${data._id}`, payload);
-      console.log('Upload success:', response.data);
+      const response = await axiosInstance.patch(`courses/update/${data._id}`, payload);
+      console.log('Update success:', response.data);
 
       toaster.success({
         title: "Update successful",
