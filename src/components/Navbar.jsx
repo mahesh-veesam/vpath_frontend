@@ -8,6 +8,7 @@ import { useNavigate, useLocation} from "react-router-dom"
 import Menu from './Menu';
 import Theme from './Theme';
 import vpathlogo from "../assets/Learn_with_Ease-removebg-preview.png"
+import Login from './Login';
 
 const Navbar = () => {
     const {authUser, login, isLoggingIn, logout} = useAuthStore();
@@ -84,6 +85,7 @@ const Navbar = () => {
                 Users
             </Button>
         }
+        {/* <Login/> */}
       </HStack>         
 
        <HStack hideFrom="lg">

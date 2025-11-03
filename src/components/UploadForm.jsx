@@ -284,6 +284,7 @@ const slots = createListCollection({
 
 const exam = createListCollection({
     items: [
+        { label: "CAT", value: "CAT" },
         { label: "CAT1", value: "CAT1" },
         { label: "CAT2", value: "CAT2" },
         { label: "FAT", value: "FAT" },
