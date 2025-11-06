@@ -19,7 +19,6 @@ const Courses = () => {
         let res = await axiosInstance.get('courses');
         let cdata = await res.data
         setData(cdata)
-        console.log(cdata)
         setLoading(false);
     }
     const getRecentData = async () => {
@@ -27,7 +26,6 @@ const Courses = () => {
         let res = await axiosInstance.get('courses/recent');
         let cdata = await res.data
         setRecent(cdata)
-        console.log("resRecentData", cdata)
         setLoading(false);
     }
 

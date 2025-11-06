@@ -7,8 +7,6 @@ import { toaster } from "@/components/ui/toaster"
 const EditForm = ({data , onUpdate , setEditForm}) => {
   const [formData, setFormData] = useState(data)
 
-  console.log(data)
-
   const handleChange = (e) => {
     const { name, value, } = e.target;
     
@@ -30,8 +28,10 @@ const EditForm = ({data , onUpdate , setEditForm}) => {
     };
 
     try {
-      const response = await axiosInstance.patch(`courses/update/${data._id}`, payload);
-      console.log('Update success:', response.data);
+      const response = await axiosInstance.patch(`courses/update/${data._id}`, payload , {
+         headers: { "Content-Type": "application/json" }, 
+      });
+      // console.log('Update success:', response.data);
 
       toaster.success({
         title: "Update successful",
@@ -184,6 +184,7 @@ const slots = createListCollection({
 
 const exam = createListCollection({
     items: [
+        { label: "CAT", value: "CAT" },
         { label: "CAT1", value: "CAT1" },
         { label: "CAT2", value: "CAT2" },
         { label: "FAT", value: "FAT" },

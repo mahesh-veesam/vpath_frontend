@@ -17,7 +17,6 @@ const Navbar = () => {
     const location = useLocation();
 
     const handleClick= async (e) => {
-        console.log("handle")
         authUser === null ? login() : logout() 
     };
 

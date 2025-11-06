@@ -78,7 +78,7 @@ export default function UploadForm() {
     try {
         const response = await uploadPromise;
         console.log('Upload success:', response.data);
-        navigate("/recentSem"); // ✅ only after successful upload
+        navigate("/recentSem");
         } catch (err) {
         console.error("Upload error:", err);
     }

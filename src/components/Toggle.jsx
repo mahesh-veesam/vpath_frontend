@@ -8,7 +8,6 @@ const Toggle = () => {
     const location = useLocation();
 
     const currentTab = location.pathname.split("/")[2] || "home";
-    console.log(currentTab)
 
     const handleNavigate = (e) => {
         navigate(`/${e.value}`);
