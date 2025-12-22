@@ -52,6 +52,10 @@ function App() {
     }
   }, []);
 
+  useEffect(() => {
+    checkAuth();
+  }, []);
+
   return (
     <Box mb="20px">
       <Toaster />
