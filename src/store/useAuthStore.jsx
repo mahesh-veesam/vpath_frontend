@@ -32,7 +32,12 @@ export const useAuthStore = create((set, get) => ({
     set({ isLoggingIn: true });
     try {   
       console.log("working")
-      window.location.href = "https://vpath.onrender.com/auth/google";
+      // window.location.href = "https://vpath.onrender.com/auth/google";
+      window.open(
+        "https://vpath.onrender.com/auth/google",
+        "_blank",
+        "noopener,noreferrer"
+      );
     } catch (error) {
       toaster.create({
         description: error?.message || "Use College mail id to login",
