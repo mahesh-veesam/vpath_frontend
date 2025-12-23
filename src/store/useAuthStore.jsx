@@ -50,8 +50,8 @@ export const useAuthStore = create((set, get) => ({
 
   logout: async () => {
     try {
-      await axiosInstance.post("/auth/logout");
       set({ authUser: null });
+      await axiosInstance.post("/auth/logout");
       localStorage.removeItem("authUser")
       toaster.create({
         description: `Logged out successfully`,

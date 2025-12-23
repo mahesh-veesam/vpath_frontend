@@ -14,7 +14,8 @@ function Menu() {
   const {authUser, login, isLoggingIn, logout} = useAuthStore();
 
   const handleClick= async (e) => {
-      authUser === null ? login() : logout() 
+    setOpen(false);
+    authUser === null ? login() : logout() 
   };
 
   return (
