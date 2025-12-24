@@ -1,44 +1,50 @@
 import { create } from "zustand";
 import { axiosInstance } from "../utils/axios.js";
-import { toaster } from "@/components/ui/toaster"
+import { toaster } from "@/components/ui/toaster";
 
 export const useAuthStore = create((set, get) => ({
-  authUser: null,
-  setAuthUser: (user) => {
-    set({ authUser: user })
-    const state = get();
-    if (state.authUser) console.log(`authUser:${state.authUser.name}`)
-  },
+
+  authUser: JSON.parse(localStorage.getItem("authUser")) || null,
 
   isLoggingIn: false,
   isCheckingAuth: true,
+  justLoggedIn: false,
 
   checkAuth: async () => {
     try {
-      const prevUser = get().authUser; 
+      const { justLoggedIn } = get();
 
       const res = await axiosInstance.get("/auth/checkAuth");
       const user = res.data.user;
 
-      set({ authUser: user });
+      if (user) {
+        set({ authUser: user });
+        localStorage.setItem("authUser", JSON.stringify(user));
 
-      if (!prevUser && user) {
-        toaster.create({
-          description: `Hi, ${user.name}`,
-          type: "success",
-        });
+        if (justLoggedIn) {
+          toaster.create({
+            description: `Hi, ${user.name}`,
+            type: "success",
+          });
+        }
+      } else {
+        set({ authUser: null });
+        localStorage.removeItem("authUser");
       }
+
     } catch (error) {
-      console.log("Error in checkAuth:", error);
       set({ authUser: null });
+      localStorage.removeItem("authUser");
+
     } finally {
-      set({ isCheckingAuth: false });
+      set({ isCheckingAuth: false, justLoggedIn: false });
     }
   },
 
   login: async () => {
-    set({ isLoggingIn: true });
-    try {   
+    set({ isLoggingIn: true, justLoggedIn: true });
+
+    try {
       const authTab = window.open(
         "https://vpath.onrender.com/auth/google",
         "_blank",
@@ -46,6 +52,7 @@ export const useAuthStore = create((set, get) => ({
       );
 
       if (!authTab) {
+        set({ justLoggedIn: false });
         toaster.create({
           description: "Popup blocked. Allow popups to login.",
           type: "warning",
@@ -53,30 +60,31 @@ export const useAuthStore = create((set, get) => ({
         return;
       }
 
-      // 🔁 Wait until user closes OAuth tab
       const timer = setInterval(() => {
         if (authTab.closed) {
           clearInterval(timer);
           get().checkAuth();
         }
       }, 800);
+
     } catch (error) {
+      set({ justLoggedIn: false });
       toaster.create({
         description: error?.message || "Use College mail id to login",
         type: "error",
       });
+
     } finally {
       set({ isLoggingIn: false });
     }
   },
 
   logout: async () => {
-    try { 
-      console.log("logged out before", get().authUser);
+    try {
       set({ authUser: null });
       await axiosInstance.post("/auth/logout");
       toaster.create({
-        description: `Logged out successfully`,
+        description: "Logged out successfully",
         type: "info",
       });
     } catch (error) {
@@ -85,7 +93,8 @@ export const useAuthStore = create((set, get) => ({
         type: "error",
       });
     } finally {
-      console.log("logged out", get().authUser);
+      localStorage.removeItem("authUser");
     }
   },
+
 }));
