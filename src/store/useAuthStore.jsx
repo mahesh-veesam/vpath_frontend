@@ -39,12 +39,27 @@ export const useAuthStore = create((set, get) => ({
   login: async () => {
     set({ isLoggingIn: true });
     try {   
-      // window.location.href = "https://vpath.onrender.com/auth/google";
-      window.open(
+      const authTab = window.open(
         "https://vpath.onrender.com/auth/google",
         "_blank",
         "noopener,noreferrer"
       );
+
+      if (!authTab) {
+        toaster.create({
+          description: "Popup blocked. Allow popups to login.",
+          type: "warning",
+        });
+        return;
+      }
+
+      // 🔁 Wait until user closes OAuth tab
+      const timer = setInterval(() => {
+        if (authTab.closed) {
+          clearInterval(timer);
+          get().checkAuth();
+        }
+      }, 800);
     } catch (error) {
       toaster.create({
         description: error?.message || "Use College mail id to login",
