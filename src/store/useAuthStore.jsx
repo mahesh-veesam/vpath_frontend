@@ -54,7 +54,6 @@ export const useAuthStore = create((set, get) => ({
       console.log("logged out before", get().authUser);
       set({ authUser: null });
       await axiosInstance.post("/auth/logout");
-      localStorage.removeItem("authUser")
       toaster.create({
         description: `Logged out successfully`,
         type: "info",
