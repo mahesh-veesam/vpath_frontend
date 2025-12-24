@@ -2,8 +2,6 @@ import { create } from "zustand";
 import { axiosInstance } from "../utils/axios.js";
 import { toaster } from "@/components/ui/toaster"
 
-const BASE_URL = "http://192.168.1.34:5000/courses" 
-
 export const useAuthStore = create((set, get) => ({
   authUser: null,
   setAuthUser: (user) => {
@@ -17,10 +15,19 @@ export const useAuthStore = create((set, get) => ({
 
   checkAuth: async () => {
     try {
+      const prevUser = get().authUser; 
+
       const res = await axiosInstance.get("/auth/checkAuth");
-      set({ authUser: res.data });
-      console.log("API response:", res.data);
-      console.log("authUser from store:", get().authUser);
+      const user = res.data.user;
+
+      set({ authUser: user });
+
+      if (!prevUser && user) {
+        toaster.create({
+          description: `Hi, ${user.name}`,
+          type: "success",
+        });
+      }
     } catch (error) {
       console.log("Error in checkAuth:", error);
       set({ authUser: null });
@@ -32,7 +39,6 @@ export const useAuthStore = create((set, get) => ({
   login: async () => {
     set({ isLoggingIn: true });
     try {   
-      console.log("working")
       // window.location.href = "https://vpath.onrender.com/auth/google";
       window.open(
         "https://vpath.onrender.com/auth/google",

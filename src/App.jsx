@@ -18,40 +18,6 @@ function App() {
     logPageView(location.pathname + location.search);
   }, [location]);
 
-  // useEffect(() => {
-  //   const params = new URLSearchParams(window.location.search);
-  //   const user = params.get("user");
-
-  //   if (user) {
-  //     try {
-  //       const userData = JSON.parse(decodeURIComponent(user));
-
-  //       console.log(`Hi, ${userData.name}`);
-  //       setAuthUser(userData);
-
-  //       toaster.create({
-  //         description: `Hi, ${userData.name}`,
-  //         type: "success",
-  //       })
-
-  //       localStorage.setItem("authUser", JSON.stringify(userData));
-
-  //       window.history.replaceState({}, document.title, "/");
-  //     } catch (err) {
-  //       console.error("Error parsing user data", err);
-  //       toaster.create({
-  //         description: `Use college mail to login`,
-  //         type: "warning",
-  //       })
-  //     }
-  //   } else {
-  //     const savedUser = localStorage.getItem("authUser");
-  //     if (savedUser) {
-  //       setAuthUser(JSON.parse(savedUser));
-  //     }
-  //   }
-  // }, []);
-
   useEffect(() => {
     checkAuth();
   }, []);
