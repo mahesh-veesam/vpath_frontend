@@ -18,7 +18,7 @@ export const useAuthStore = create((set, get) => ({
   checkAuth: async () => {
     try {
       const res = await axiosInstance.get("/auth/checkAuth");
-      set({ authUser: res.data });
+      set({ authUser: res.data.user });
       console.log("API response:", res.data);
       console.log("authUser from store:", get().authUser);
       console.log("success")
@@ -51,7 +51,8 @@ export const useAuthStore = create((set, get) => ({
   },
 
   logout: async () => {
-    try {
+    try { 
+      console.log("logged out before", get().authUser);
       set({ authUser: null });
       await axiosInstance.post("/auth/logout");
       localStorage.removeItem("authUser")
