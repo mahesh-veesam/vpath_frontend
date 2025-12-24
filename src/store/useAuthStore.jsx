@@ -64,6 +64,8 @@ export const useAuthStore = create((set, get) => ({
         description: error?.response?.data?.message,
         type: "error",
       });
+    } finally {
+      console.log("logged out", get().authUser);
     }
   },
 }));
